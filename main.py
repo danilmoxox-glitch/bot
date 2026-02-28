@@ -73,7 +73,7 @@ async def start(message: types.Message):
         return await message.answer(f"<b>Доступ закрыт!</b>\nПодпишись на канал сервера: {CHANNEL_ID}", reply_markup=kb.as_markup())
 
     await message.answer(
-        f"<b>{e(E_SKULL)} NEVERMORE HOUSE 1.21.1 {e(E_SKULL)}</b>\n"
+        f"<b>{e(E_SKULL)} NEVERMORE HOUSE 1.21.11 {e(E_SKULL)}</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━\n"
         f"Привет! Это официальный бот для подачи заявок.\n"
         f"Тщательно заполняй анкету, админы смотрят всё.\n\n"
@@ -82,7 +82,7 @@ async def start(message: types.Message):
 
 @dp.callback_query(F.data == "info")
 async def info(callback: types.CallbackQuery):
-    await callback.message.answer(f"<b>NEVERMORE 1.21.1</b>\nВанильное выживание без приватов.\nСоблюдай правила и не мешай другим.")
+    await callback.message.answer(f"<b>NEVERMORE 1.21.11 </b>\nВанильное выживание без приватов.\nСоблюдай правила и не мешай другим.")
     await callback.answer()
 
 @dp.callback_query(F.data == "me")
@@ -229,4 +229,5 @@ if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
+
         pass
